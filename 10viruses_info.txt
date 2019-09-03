@@ -1,0 +1,11 @@
+VirusID	VirusName	GenomeSize,bp
+NC_001900	Mycobacterium phage D29, complete genome	49136
+NC_001902	Methanobacterium phage psiM2, complete genome	26111
+NC_001909	Lactococcus phage bIL170, complete genome	31754
+NC_001942	Mycoplasma phage MAV1, complete genome	15644
+NC_001954	Enterobacteria phage If1, complete genome	8454
+NC_001956	Vibrio phage fs2, complete genome	8651
+NC_001998	Guinea pig Chlamydia phage, complete genome	4529
+NC_000924	Enterobacteria phage 933W, complete genome	61670
+NC_000867	Pseudoalteromonas phage PM2, complete genome	10079
+NC_000871	Streptococcus phage Sfi19, complete genome	37370

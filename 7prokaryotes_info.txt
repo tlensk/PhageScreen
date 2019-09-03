@@ -1,0 +1,8 @@
+RepliconID	RepliconName	RepliconSize,bp
+NC_000922	Chlamydophila pneumoniae CWL029 chromosome, complete genome	1230230
+NC_002505	Vibrio cholerae O1 biovar El Tor str. N16961 chromosome I, complete sequence	2961149
+NC_000915	Helicobacter pylori 26695 chromosome, complete genome	1667867
+NC_002662	Lactococcus lactis subsp. lactis Il1403 chromosome, complete genome	2365589
+NC_003143	Yersinia pestis CO92 chromosome, complete genome	4653728
+NC_003198	Salmonella enterica subsp. enterica serovar Typhi str. CT18, complete genome	4809037
+NC_004668	Enterococcus faecalis V583 chromosome, complete genome	3218031
