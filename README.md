@@ -9,7 +9,7 @@ High-throughput Computational Method to Evaluate Potential Host Range for Bacter
 
 This is a multi-fasta file that contains viral sequences for the test example.
 
-# 10viruses_info.txt
+## 10viruses_info.txt
 
 This is a tab-delimited file that contains a brief description of viral sequences stored in 10viruses.fasta in the following format: VirusID  VirusName GenomeSize,bp 
 
