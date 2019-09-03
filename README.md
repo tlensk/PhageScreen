@@ -16,11 +16,8 @@ This is a tab-delimited file that contains a brief description of viral sequence
 Sample:
 
 VirusID	VirusName	GenomeSize,bp
-
 NC_001900	Mycobacterium phage D29, complete genome	49136
-
 NC_001902	Methanobacterium phage psiM2, complete genome	26111
-
 NC_001909	Lactococcus phage bIL170, complete genome	31754
 
 ### 7prokaryotes.fasta
