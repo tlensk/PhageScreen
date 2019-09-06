@@ -14,7 +14,7 @@ The script computes the intersection ratios between viruses and prokaryotes. It 
 
 One can run the script on the test toy example of 10 viruses and 7 prokayotes using the following command:
 
-python3 CompIntM.py 40 10viruses.fasta 7 prokaryotes.fasta test
+python3    CompIntM.py    40    10viruses.fasta    7prokaryotes.fasta     test
 
 To run the script on data keep the order of the input parameters printed after the script name as follows:
 (1) screening window size
