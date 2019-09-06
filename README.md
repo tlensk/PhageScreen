@@ -8,7 +8,7 @@ LICENSE
 
 ## Part I. Computing intersection matrices
 
-**### Code:**
+### Code:
 #### CompIntM.py
 The script computes the intersection ratios between viruses and prokaryotes. It outpus the results as two intersection matrices (one for forward and another one for the reverse direction). Each row of an intersection matrix except for the first one represents a prokaryote sequence. The first row contains information about the screening window size and viral identifiers for columns. Each column (except for the first one) represent a viral sequence. The first column contains information about the screening window size and prokaryotic identifiers for rows. Thus, each cell of an intersection matrix (except for the cells in the first row and the first column) contains a value of the intersection ratio between the corresponding prokaryote (row index) and virus (column index) sequences.
 
@@ -73,5 +73,4 @@ These tab-separated files contain information about the corresponding flag for e
 for Dataset1 and Dataset2 separately. For more details on flag values and description, see Table3.txt.
 #### Dataset1_820phages_predict.txt
 #### Dataset2_1962phages_predict.txt
-
 
