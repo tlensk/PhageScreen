@@ -178,10 +178,10 @@ else:
     
     #fOut = open(pref+"_10viruses_meta.txt","w")
     fOut = open(pref+"_10viruses_meta.txt","x")
-    print("VirusID","VirusName", "GenomeSize,bp", sep = "\t", file = fOut)
+    print("VirusID","VirusName", "GenomeSize,bp", "DictionarySize,#strings", sep = "\t", file = fOut)
     
     print("Computing an array of viral dictionaries...")
-    print("\nVirusID\tGenomeSize,bp" )
+    print("\nVirusID\tGenomeSize,bp\tDictionarySize,#strings" )
     tm_st = tm.time()
 
     #new version
@@ -190,17 +190,16 @@ else:
         line = line.strip()
         if (line != "") and (line[0] == ">"):
             if text != "":
-                #print(r_id,r_name, len(text))
-                #print("!!!",r_id,r_name, text)
                 r_size = len(text)
-                print(r_id,r_name, r_size, sep = "\t", file = fOut)
-                print(r_id, r_size, sep = "\t")
                 r_text = Rev_cmp(text)
                 d = CreateDict(text,m,gtype)
                 r_d = CreateDict(r_text,m,gtype)
                 t_Dv = AddToArrayOfDicts_FR(t_Dv, d,r_d)
+                d_len = len(d)
                 t_vir.append(r_id)
-                t_Dvsize.append(len(d))
+                t_Dvsize.append(d_len)
+                print(r_id,r_name, r_size,d_len, sep = "\t", file = fOut)
+                print(r_id, r_size, d_len, sep = "\t")
                 
             text = ""
             line = line[1:]
@@ -213,17 +212,17 @@ else:
             
             
     if text != "":
-        #print(r_id,r_name, len(text))
-        #print("!!!",r_id,r_name, text)
         r_size = len(text)
-        print(r_id,r_name, r_size, sep = "\t", file = fOut)
-        print(r_id, r_size, sep = "\t")
         r_text = Rev_cmp(text)
         d = CreateDict(text,m,gtype)
         r_d = CreateDict(r_text,m,gtype)
         t_Dv = AddToArrayOfDicts_FR(t_Dv, d, r_d)
+        d_len = len(d)
         t_vir.append(r_id)
         t_Dvsize.append(len(d))
+        print(r_id,r_name, r_size,d_len, sep = "\t", file = fOut)
+        print(r_id, r_size, d_len, sep = "\t")
+
     fInV.close()
 
 
@@ -233,7 +232,7 @@ else:
     tm_fn = tm.time()
     fOut.close()
     
-    print("Time for creating an array of viral dictionaries, sec:", tm_fn-tm_st, sep = sep,file=fOut1)
+    print("Time for creating an array of viral dictionaries, sec:", round(tm_fn-tm_st,4), sep = sep,file=fOut1)
     print("\nTime for creating an array of viral dictionaries, sec:", round(tm_fn-tm_st,4),"\n")
     print("RepliconID", "RepliconSize,bp", "DictionarySize,#strings", "Time,sec",sep = sep,file=fOut1)
     print("Computing the intersection between replicon and viral dictionaries...\n")
@@ -255,7 +254,7 @@ else:
     
     #fOut = open(pref+"_7prokaryotes_meta.txt","w")
     fOut = open(pref+"_7prokaryotes_meta.txt","x")
-    print("RepliconID","RepliconName", "RepliconSize,bp", sep = "\t", file = fOut)
+    print("RepliconID","RepliconName", "RepliconSize,bp","DictionarySize,#strings", sep = "\t", file = fOut)
     
 
     #New version
@@ -267,14 +266,15 @@ else:
                 #print("!!!",r_id,r_name, text)
                 tm_st1 = tm.time()
                 r_size = len(text)
-                print(r_id,r_name, r_size, sep = "\t", file = fOut)
                 Db = CreateDict(text,m, gtype)
                 ttt = FindIntersectionWithList(Db,t_Dv,l=2)
                 #print(ttt[0][0])
                 t_rep.append(r_id)
                 tm_fn1 = tm.time()
-                print(r_id, r_size, len(Db),tm_fn1-tm_st1,sep = sep,file=fOut1)
-                print(r_id, r_size, len(Db), round(tm_fn1-tm_st1,4))
+                Db_len = len(Db)
+                print(r_id, r_size, Db_len,round(tm_fn1-tm_st1,4),sep = sep,file=fOut1)
+                print(r_id, r_size, Db_len, round(tm_fn1-tm_st1,4))
+                print(r_id,r_name, r_size, Db_len, sep = "\t", file = fOut)
                 
                 row_ind = t_rep.index(r_id)
                 #print(row_ind)
@@ -295,13 +295,14 @@ else:
         #print("!!!",r_id,r_name, text)
         tm_st1 = tm.time()
         r_size = len(text)
-        print(r_id,r_name, r_size, sep = "\t", file = fOut)
         Db = CreateDict(text,m, gtype)
         ttt = FindIntersectionWithList(Db,t_Dv,l=2)
         t_rep.append(r_id)
         tm_fn1 = tm.time()
-        print(r_id, r_size, len(Db),tm_fn1-tm_st1,sep = sep,file=fOut1)
-        print(r_id, r_size, len(Db), round(tm_fn1-tm_st1,4))
+        Db_len = len(Db)
+        print(r_id, r_size, Db_len,round(tm_fn1-tm_st1,4),sep = sep,file=fOut1)
+        print(r_id, r_size, Db_len, round(tm_fn1-tm_st1,4))
+        print(r_id,r_name, r_size, Db_len, sep = "\t", file = fOut)
         
         row_ind = t_rep.index(r_id)
         #print(row_ind)
