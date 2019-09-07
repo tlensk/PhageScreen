@@ -1,0 +1,12 @@
+Virus Category,Ed. DB,New DB
+1. No host listed in DB and no intersection with any prokaryote host,0,126
+2. No host listed in DB but has intersections with some host in DB,0,71
+3. No sequence data for listed host,0,384
+Total with no data (not part of the evaluation),0,581
+4. No intersection with any host in DB at N=40bp,370,880
+5. Intersection with some prokaryote but not with listed host,51,66
+6. Intersection with host of the same genus as listed host,40,75
+Total disagreements,461,1021
+7. Intersection with listed host but larger intersect with another host,27,43
+8. Largest intersection is with listed annotated host,332,317
+Total agreements,359,360
