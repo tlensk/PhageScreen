@@ -8,7 +8,8 @@ import sys
     (4) prefix for output files that the script generates as a result
         (if files with such prefix already exist, the script terminate execution with an error message)"""
 """
-40 10viruses.fasta 7prokaryotes.fasta 0901
+Input parameters:
+40 Test_10viruses.fasta Test_7prokaryotes.fasta Test
 """        
 
 
@@ -154,8 +155,8 @@ else:
 
     t_rep = []
     t_vir = []
-    fOut1 = open(pref+"_Timing.txt", "w")
-    #fOut1 = open(pref+"_Timing.txt", "x")
+    #fOut1 = open(pref+"_Timing.txt", "w")
+    fOut1 = open(pref+"_Timing.txt", "x")
     
     sep = "\t"
     
@@ -175,8 +176,8 @@ else:
     r_name = ""
     
     
-    fOut = open(pref+"_10viruses_meta.txt","w")
-    #fOut = open(pref+"_10viruses_meta.txt","x")
+    #fOut = open(pref+"_10viruses_meta.txt","w")
+    fOut = open(pref+"_10viruses_meta.txt","x")
     print("VirusID","VirusName", "GenomeSize,bp", sep = "\t", file = fOut)
     
     print("Computing an array of viral dictionaries...")
@@ -252,8 +253,8 @@ else:
     
     
     
-    fOut = open(pref+"_7prokaryotes_meta.txt","w")
-    #fOut = open(pref+"_7prokaryotes_meta.txt","x")
+    #fOut = open(pref+"_7prokaryotes_meta.txt","w")
+    fOut = open(pref+"_7prokaryotes_meta.txt","x")
     print("RepliconID","RepliconName", "RepliconSize,bp", sep = "\t", file = fOut)
     
 
@@ -331,7 +332,7 @@ else:
         ''' Prints found intersection ratios: "B" - both strands; "F" - only forward; "R"-only reverse.'''
         t_name = fname.split(".")
         
-        fOut = open(t_name[0]+"_"+flag+"."+t_name[1],"w");
+        fOut = open(t_name[0]+"_"+flag+"."+t_name[1],"x");
         #fOut = open(flag+"_"+fname,"x");
         
         
