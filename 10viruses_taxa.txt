@@ -1,0 +1,11 @@
+ID	Name	Taxa	Annotated_host
+NC_001900	Mycobacterium phage D29, complete genome.	Viruses; dsDNA viruses, no RNA stage; Caudovirales; Siphoviridae;L5virus.	Mycobacterium tuberculosis
+NC_001902	Methanobacterium phage psiM2, complete genome.	Viruses; dsDNA viruses, no RNA stage; Caudovirales; Siphoviridae.	Methanobacterium thermoautotrophicum
+NC_001909	Lactococcus phage bIL170, complete genome.	Viruses; dsDNA viruses, no RNA stage; Caudovirales; Siphoviridae;Sk1virus.	Lactococcus lactis
+NC_001942	Mycoplasma phage MAV1, complete genome.	Viruses; dsDNA viruses, no RNA stage; unclassified dsDNA phages.	Mycoplasma arthritidis
+NC_001954	Enterobacteria phage If1, complete genome.	Viruses; ssDNA viruses; Inoviridae; unassigned Inoviridae.	Escherichia coli
+NC_001956	Vibrio phage fs2, complete genome.	Viruses; ssDNA viruses; Inoviridae; Saetivirus.	Vibrio cholerae O139
+NC_001998	Guinea pig Chlamydia phage, complete genome.	Viruses; ssDNA viruses; Microviridae; Gokushovirinae;Chlamydiamicrovirus.	Chlamydia psittaci
+NC_000924	Enterobacteria phage 933W, complete genome.	Viruses; dsDNA viruses, no RNA stage; Caudovirales; Podoviridae;Sepvirinae; Nona33virus.	Escherichia coli O157:H7 EDL933
+NC_000867	Pseudoalteromonas phage PM2, complete genome.	Viruses; dsDNA viruses, no RNA stage; Corticoviridae; Corticovirus.	Pseudoalteromonas
+NC_000871	Streptococcus phage Sfi19, complete genome.	Viruses; dsDNA viruses, no RNA stage; Caudovirales; Siphoviridae;Sfi21dt1virus.	Streptococcus thermophilus
