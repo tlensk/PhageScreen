@@ -1,9 +1,9 @@
 """This script takes 5 command line arguments:
-    (1) prefix for the output files that the script generates
-    (2) name of a file that contains the taxonomy information for viruses
-    (3) name of a file that contains the taxonomy information for prokaryotes
-    (4) name of a file that contains a forward intersection matrix
-    (5) name of a file that contains a reverse intersection matrix
+    (1) name of a file that contains the taxonomy information for viruses
+    (2) name of a file that contains the taxonomy information for prokaryotes
+    (3) name of a file that contains a forward intersection matrix
+    (4) name of a file that contains a reverse intersection matrix
+    (5) prefix for the output files that the script generates
 """
 
 import sys
@@ -12,14 +12,16 @@ import sys
 if len(sys.argv) <= 5:
     print("Not enough parameters are entered!")
 else:
-    pref = sys.argv[1] #"test_"
-    fVTaxName = sys.argv[2] #"10viruses_taxa.txt"
-    fBTaxName = sys.argv[3] #"7prokaryotes_taxa.txt"
-    fM_F_name = sys.argv[4] #"test_Matrix_F.csv"
-    fM_R_name = sys.argv[5] #"test_Matrix_R.csv"
+    fVTaxName = sys.argv[1] #"10viruses_taxa.txt"
+    fBTaxName = sys.argv[2] #"7prokaryotes_taxa.txt"
+    fM_F_name = sys.argv[3] #"test_Matrix_F.csv"
+    fM_R_name = sys.argv[4] #"test_Matrix_R.csv"    
+    pref = sys.argv[5] #"test_"
+
     
 """
-0902 10viruses_taxa.txt 7prokaryotes_taxa.txt 0901_Matrix_F.csv 0901_Matrix_R.csv
+Input parameters:
+10viruses_taxa.txt 7prokaryotes_taxa.txt test_Matrix_F.csv test_Matrix_R.csv test
 """    
     
     
@@ -330,8 +332,8 @@ res_rc = PredictHost(t_bac, t_phs, t_reduced, matrix, t_max, d_b_taxa, d_v_taxa,
 
 t_fl = []
 d_total = {}
-fRes_stat = open(pref+"res.txt","w") 
-fRes = open(pref+"flags.txt","w")
+fRes_stat = open(pref+"_res.txt","w") 
+fRes = open(pref+"_flags.txt","w")
 if res[0] == res_rc[0]:
     nn = len(res[0])
     print("VirusID","flag_F","flag_R","max_flag",sep = "\t",file=fRes)
@@ -345,11 +347,31 @@ if res[0] == res_rc[0]:
         else:
             d_total[max_i] = d_total[max_i] + 1
 t_fl = sorted(t_fl)
-print("Flag", "#viruses","%viruses")
-print("Flag", "#viruses","%viruses", sep = "\t", file = fRes_stat)
+print("Category", "Result",  "#viruses","%viruses")
+print("Category","Result", "#viruses","%viruses", sep = "\t", file = fRes_stat)
+
 for it in t_fl:
-    print(it, d_total[it], str(round((d_total[it]/nn)*100,2))+"%")
-    print(it, d_total[it], str(round((d_total[it]/nn)*100,2))+"%",sep = "\t", file = fRes_stat)
+    if it == -2:
+        label = "No intersection is found"
+        cat = 4
+    elif it == 0:
+        label = "The Intersection is found with prokaryotes other than the annotated host"
+        cat = 5
+    elif it == 1:
+        label = "The intersection is found with a prokaryote that matches the annoteted host at the genus level"
+        cat = 6
+    elif it == 2:
+        label = "The intersection with the annotated host is not the largest intersection found"
+        cat = 7
+    elif it == 3:
+        label = "The annotated host has the largest intersection"
+        cat = 8
+    else:
+        label = ""
+        cat = ""
+        
+    print(cat, label, d_total[it], str(round((d_total[it]/nn)*100,2))+"%")
+    print(cat, label, d_total[it], str(round((d_total[it]/nn)*100,2))+"%",sep = "\t", file = fRes_stat)
 
 '''
 num = 0
