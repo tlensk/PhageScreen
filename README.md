@@ -85,7 +85,7 @@ ID	Name	Taxa	Species
 The species column should include binomial nomenclature for a prokaryote species
 
 ### Results for Dataset1 and Dataset2:
-These tab-separated files contain information about the corresponding category for each virus shown in Table3 for Dataset1 and Dataset2 separately. For more details about virus categories, see Table3.txt.
+These tab-separated files contain information about the corresponding category for each virus shown in Table3 for Dataset1 and Dataset2 separately. For more details about virus categories, see Table3.csv.
 #### Dataset1_820phages_predict.txt
 #### Dataset2_1962phages_predict.txt
 
