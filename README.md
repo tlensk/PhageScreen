@@ -95,9 +95,9 @@ These tab-separated files contain information about the corresponding category f
 ### Code:
 #### DrawDots.py
 The script produces a Dot Plot to compare two genomes graphically.
-Accepts command line arguments: minimum length for a match
+It accepts command line arguments: minimum length for a match
 followed by the names of two multifasta files
 followed by prefix for two output files (or stdout)
-followed by optional arguments (not abbreviatable):
+followed by optional arguments:
 
 `python3    DrawDots.py    40    Test_10viruses.fasta    Test_7prokaryotes.fasta     Test`
