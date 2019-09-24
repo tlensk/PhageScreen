@@ -90,3 +90,14 @@ These tab-separated files contain information about the corresponding category f
 #### Dataset1_820phages_predict.txt
 #### Dataset2_1962phages_predict.txt
 
+## PartIII. Visualization
+
+### Code:
+#### DrawDots.py
+The script produces a Dot Plot to compare two genomes graphically.
+Accepts command line arguments: minimum length for a match
+followed by the names of two multifasta files
+followed by prefix for two output files (or stdout)
+followed by optional arguments (not abbreviatable).
+
+`python3    DrawDots.py    40    Test_10viruses.fasta    Test_7prokaryotes.fasta     Test`
