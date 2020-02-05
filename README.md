@@ -1,4 +1,4 @@
-# SupplementaryMaterials
+# PhageScreen: exploring virus-host interactions
 
 Tatiana Lenskaia (lensk010@umn.edu) and Daniel Boley (boley@umn.edu)
 
